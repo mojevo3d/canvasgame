@@ -3,7 +3,6 @@ class User{
     this.width = params.width || 20
     this.height = this.width // ball
     this.pos = params.pos || {x: 20, y: 240}
-    this.radius = 20
   }
 
   draw (ctx) {

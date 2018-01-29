@@ -27,4 +27,8 @@ class Game {
     obj.pos.x = 0 + obj.width
     obj.pos.y = this.board.height - obj.height
   }
+
+  refresh(){
+    this.ctx.clearRect(0, 0, this.board.width, this.board.height)
+  }
 }
