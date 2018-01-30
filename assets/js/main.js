@@ -1,10 +1,17 @@
 // init board
 const game = new Game()
-// init navigation
-const navi = new Navigation(game.board)
 // init user
 const user = new User()
+// init view
+const view = new View({game: game,ctx: game.ctx})
 
-game.setStartPosition(user)
+game.setViewPos(view)
+game.setUserPosition(user, view)
+
 game.draw(user)
+game.draw(view)
+
+// init navigation
+const navi = new Navigation({user: user, ctx: game.ctx, view: view})
+
 

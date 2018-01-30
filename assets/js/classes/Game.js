@@ -23,12 +23,18 @@ class Game {
     obj.draw(this.ctx)
   }
 
-  setStartPosition(obj){
-    obj.pos.x = 0 + obj.width
+  setUserPosition (obj, view) {
+    obj.pos.x = view.width / 2
+    obj.pos.y = this.board.height - obj.height
+  }
+
+  setViewPos (obj) {
+    obj.pos.x = 0
     obj.pos.y = this.board.height - obj.height
   }
 
   refresh(){
     this.ctx.clearRect(0, 0, this.board.width, this.board.height)
   }
+
 }
