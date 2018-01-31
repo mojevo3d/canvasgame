@@ -5,6 +5,7 @@ class Navigation {
     this.animSpeed = 10
     this.ctx = param.ctx
     this.view = param.view
+    this.bg = param.bg
     this.activeDirection = null
     this.animTime = 500
     this.init()
@@ -52,6 +53,8 @@ class Navigation {
         this.view.refresh()
         this.view.pos.x++
         this.user.pos.x++
+
+
         this.view.draw(this.ctx)
         this.user.draw(this.ctx)
         break

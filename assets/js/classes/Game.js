@@ -10,7 +10,7 @@ class Game {
     this.setWidth()
   }
 
-  setWidth (width = 800, height = 400) {
+  setWidth (width = 800, height = 600) {
     this.board.width = width
     this.board.height = height
   }

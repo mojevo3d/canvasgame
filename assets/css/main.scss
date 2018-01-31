@@ -1,4 +1,41 @@
 
-#canvas{
-  border:1px solid green;
+
+main{
+  width:800px;
+  height:600px;
+  border:2px solid #000;
+  display: block;
+  padding:0;
+  margin:0 auto;
+  position: relative;
 }
+
+
+#canvas {
+  border: 1px solid green;
+  z-index: 3;
+  position: absolute;
+  top:0;
+  left:0;
+  padding:0;
+  margin:0 auto;
+  display: block;
+}
+
+.layer {
+  border: 1px solid blue;
+  width: 800px;
+  height: 600px;
+  position: absolute;
+  z-index:0;
+  padding:0;
+  margin:0 auto;
+
+  &#bg_layer1{
+    z-index: 1;
+  }
+  &#bg_layer2{
+    z-index: 2;
+  }
+}
+
